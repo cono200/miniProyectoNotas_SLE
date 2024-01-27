@@ -58,6 +58,7 @@ namespace miniProyectoNotas_SLE.VistaModelo.VMNotas
             };
             await funcion.ActualizarNota(notaEditada);
 
+           // await Navigation.PushAsync(new ListaNotas());
         }
 
         public async Task Volver()
