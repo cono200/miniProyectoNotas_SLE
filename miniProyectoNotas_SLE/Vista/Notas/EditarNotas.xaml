@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="miniProyectoNotas_SLE.Vista.Notas.EditarNotas">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#1d1d1d">
+        <StackLayout Orientation="Horizontal" Padding="15">
+
+            <Image Source="flechita.png"  WidthRequest="40">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+           
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Título: "
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+                <Entry Placeholder="Ingrese el título"
+                       FontAttributes="Bold"
+                       TextColor="#ffeb72"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding parametrosRecibe.Titulo}"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Texto: "
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       FontSize="18"/>
+                <Entry Placeholder="Ingrese el texto"
+                       FontAttributes="Bold"
+                       TextColor="#ffeb72"
+                       PlaceholderColor="White"
+                       TextTransform="Lowercase"
+                       HorizontalOptions="StartAndExpand"
+                       Text="{Binding parametrosRecibe.Texto}"/>
+            </StackLayout>
+
+            <!-- Botón para editar el Pokémon -->
+            <Frame HorizontalOptions="Center"
+                   Padding="6"
+                   Margin="0,30,0,0"
+                   CornerRadius="15"
+                   HasShadow="False"
+                   BackgroundColor="#FEC100">
+                <Button Text="Editar"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#FEC100"
+                        BorderColor="#FFE48B"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        WidthRequest="100"
+                        HeightRequest="60"
+                        Command="{Binding EditarCommand}"/>
+
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
