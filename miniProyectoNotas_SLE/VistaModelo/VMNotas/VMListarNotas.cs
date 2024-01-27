@@ -23,6 +23,7 @@ namespace miniProyectoNotas_SLE.VistaModelo.VMNotas
         public VMListarNotas(INavigation navigation)
         {
             Navigation = navigation;
+            MostrarNota();
         }
         #endregion
         #region OBJETOS

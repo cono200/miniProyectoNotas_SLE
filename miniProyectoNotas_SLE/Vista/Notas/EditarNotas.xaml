@@ -28,7 +28,7 @@
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding parametrosRecibe.Titulo}"/>
+                       Text="{Binding parametrosRecibe.titulo}"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -43,7 +43,7 @@
                        PlaceholderColor="White"
                        TextTransform="Lowercase"
                        HorizontalOptions="StartAndExpand"
-                       Text="{Binding parametrosRecibe.Texto}"/>
+                       Text="{Binding parametrosRecibe.texto}"/>
             </StackLayout>
 
             <!-- Botón para editar el Pokémon -->

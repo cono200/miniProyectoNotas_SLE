@@ -11,7 +11,7 @@ namespace miniProyectoNotas_SLE
         {
             InitializeComponent();
 
-            MainPage = new ListaNotas();
+            MainPage = new NavigationPage(new ListaNotas());
         }
 
         protected override void OnStart()

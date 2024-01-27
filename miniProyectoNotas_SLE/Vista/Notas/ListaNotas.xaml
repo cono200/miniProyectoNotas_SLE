@@ -34,17 +34,17 @@
                             <StackLayout
                                  Margin="0,100,0,50">
 
-                                <Label Text="{Binding Titulo}"
+                                <Label Text="{Binding titulo}"
                                        CharacterSpacing="1"
                                        FontSize="20"
                                        Margin="0,-10,0,-1"
                                        />
 
-                                <Label Text="{Binding Texto}"
-                                       CharacterSpacing="1"
-                                       FontSize="20"
-                                       Margin="0,-10,0,-1"
-                                       />
+                                <Label Text="{Binding texto}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.IradetalleCommand, Source={x:Reference lista}}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                    </Label.GestureRecognizers>
+                                </Label>
 
                             </StackLayout>
 
@@ -72,7 +72,7 @@
                 FontSize="50"
                 FontAttributes="Bold"
                 BackgroundColor="#FFD755"
-                Command="{Binding Iraregistrocommand}"/>
+                Command="{Binding IraregistroCommand}"/>
 
 
     </Grid>

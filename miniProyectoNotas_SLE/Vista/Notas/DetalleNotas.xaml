@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="miniProyectoNotas_SLE.Vista.Notas.DetalleNotas">
-    <Grid BackgroundColor="{Binding parametrosRecibe.Colorfondo}">
+    <Grid BackgroundColor="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <!-- Para el título -->
@@ -20,10 +20,10 @@
         </Image>
 
         <!-- Título -->
-        <Label Grid.Row="1" Text="{Binding parametrosRecibe.Titulo}" FontSize="40" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0" />
+        <Label Grid.Row="1" Text="{Binding parametrosRecibe.titulo}" FontSize="40" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
 
         <!-- Texto -->
-        <Label Grid.Row="2" Text="{Binding parametrosRecibe.Texto}" FontSize="20" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0" />
+        <Label Grid.Row="2" Text="{Binding parametrosRecibe.texto}" FontSize="20" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
 
         <!-- StackLayout para las imágenes de editar y eliminar -->
         <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,20">
@@ -35,7 +35,7 @@
 
             <Image Source="https://i.ibb.co/KKCW1H7/bote-de-basura.png" WidthRequest="40">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding EliminarCommand}" CommandParameter="{Binding parametrosRecibe.Nombre}" />
+                    <TapGestureRecognizer Command="{Binding EliminarCommand}" CommandParameter="{Binding parametrosRecibe.titulo}" />
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
