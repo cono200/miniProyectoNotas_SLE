@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="miniProyectoNotas_SLE.Vista.Notas.RegistarNotas"
              NavigationPage.HasNavigationBar="False">
-    <Grid RowDefinitions="80,*"
+   <Grid RowDefinitions="80,*"
           BackgroundColor="#1d1d1d">
         <StackLayout Orientation="Horizontal" Padding="15">
 
@@ -16,36 +16,37 @@
             <Button Text="Añadir" Command="{Binding InsertarCommand}" HorizontalOptions="EndAndExpand"/>
         </StackLayout>
 
-        <StackLayout Grid.Row="1" Margin="10">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Título: "
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       FontSize="18"/>
-                <Entry Placeholder="Ingrese el título"
-                       FontAttributes="Bold"
-                       TextColor="#ffeb72"
-                       PlaceholderColor="White"
-                       TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"
-                       Text="{Binding Titulo}"/>
-            </StackLayout>
+        <ScrollView Grid.Row="1" Margin="10">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Título: "
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           FontSize="18"/>
+                    <Editor Placeholder="Ingrese el título"
+                           FontAttributes="Bold"
+                           TextColor="#ffeb72"
+                           PlaceholderColor="White"
+                           TextTransform="Lowercase"
+                           HorizontalOptions="StartAndExpand"
+                           Text="{Binding Titulo}"/>
+                </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Texto: "
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       VerticalOptions="Center"
-                       FontSize="18"/>
-                <Entry Placeholder="Ingrese el texto"
-                       FontAttributes="Bold"
-                       TextColor="#ffeb72"
-                       PlaceholderColor="White"
-                       TextTransform="Lowercase"
-                       HorizontalOptions="StartAndExpand"
-                       Text="{Binding Texto}"/>
+                
+                    
+                    <Editor 
+            
+            TextColor="#ffeb72"
+            PlaceholderColor="White"
+            TextTransform="Lowercase"
+            HorizontalOptions="FillAndExpand"
+            Text="{Binding Texto}"
+            VerticalOptions="FillAndExpand" 
+                FontSize="20"
+                        />
+                
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </Grid>
 </ContentPage>

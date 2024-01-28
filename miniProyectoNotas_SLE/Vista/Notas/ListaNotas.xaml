@@ -10,6 +10,11 @@
                FontSize="28"
                FontAttributes="Bold"
                TextColor="#FD8298"/>
+        <Label Text=" power by pokedex"
+               VerticalOptions="EndAndExpand"
+               FontSize="10"
+               FontAttributes="Italic"
+               TextColor="black"/>
 
         <CollectionView BackgroundColor="#EAEDEC"
                         Grid.Row="1"

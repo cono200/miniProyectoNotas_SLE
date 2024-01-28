@@ -18,6 +18,7 @@ namespace miniProyectoNotas_SLE.Vista.Notas
             InitializeComponent();
             BindingContext = new VMRegistroNotas(Navigation);
 
+            
         }
     }
 }

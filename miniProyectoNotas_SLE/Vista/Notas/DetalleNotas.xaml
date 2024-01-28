@@ -2,42 +2,44 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="miniProyectoNotas_SLE.Vista.Notas.DetalleNotas">
-    <Grid BackgroundColor="White">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <!-- Para el título -->
-            <RowDefinition Height="Auto" />
-            <!-- Para el texto -->
-            <RowDefinition Height="Auto" />
-            <!-- Para los botones -->
-        </Grid.RowDefinitions>
+    <ScrollView>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <!-- Para el título -->
+                <RowDefinition Height="Auto" />
+                <!-- Para el texto -->
+                <RowDefinition Height="Auto" />
+                <!-- Para los botones -->
+            </Grid.RowDefinitions>
 
-        <!-- Flechita arriba a la izquierda -->
-        <Image Grid.Row="0" Source="flechita.png" WidthRequest="40">
-            <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding VolverCommand}" />
-            </Image.GestureRecognizers>
-        </Image>
-
-        <!-- Título -->
-        <Label Grid.Row="1" Text="{Binding parametrosRecibe.titulo}" FontSize="40" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
-
-        <!-- Texto -->
-        <Label Grid.Row="2" Text="{Binding parametrosRecibe.texto}" FontSize="20" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
-
-        <!-- StackLayout para las imágenes de editar y eliminar -->
-        <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,20">
-            <Image Source="https://i.ibb.co/DVJpJcz/editar-1.png" WidthRequest="40">
+            <!-- Flechita arriba a la izquierda -->
+            <Image Grid.Row="0" Source="flechita.png" WidthRequest="40">
                 <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding IrAEditarCommand}" CommandParameter="{Binding parametrosRecibe}" />
+                    <TapGestureRecognizer Command="{Binding VolverCommand}" />
                 </Image.GestureRecognizers>
             </Image>
 
-            <Image Source="https://i.ibb.co/KKCW1H7/bote-de-basura.png" WidthRequest="40">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding EliminarCommand}" CommandParameter="{Binding parametrosRecibe.titulo}" />
-                </Image.GestureRecognizers>
-            </Image>
-        </StackLayout>
-    </Grid>
+            <!-- Título -->
+            <Label Grid.Row="1" Text="{Binding parametrosRecibe.titulo}" FontSize="40" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
+
+            <!-- Texto -->
+            <Label Grid.Row="2" Text="{Binding parametrosRecibe.texto}" FontSize="20" TextColor="Black" VerticalOptions="Center" Margin="10,0,0,0" />
+
+            <!-- StackLayout para las imágenes de editar y eliminar -->
+            <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,20">
+                <Image Source="https://i.ibb.co/DVJpJcz/editar-1.png" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding IrAEditarCommand}" CommandParameter="{Binding parametrosRecibe}" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="https://i.ibb.co/KKCW1H7/bote-de-basura.png" WidthRequest="40">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding EliminarCommand}" CommandParameter="{Binding parametrosRecibe.titulo}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>
